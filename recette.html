@@ -4,13 +4,16 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Fiche recette — La boîte à recettes par Marilou C.</title>
+  <!-- Polices Google Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;0,700;1,600&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <!-- Feuille de style principale -->
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
+  <!-- En-tête et navigation -->
   <header class="site-header">
     <div class="wrap header-inner">
       <a href="index.html" class="brand">
@@ -24,10 +27,12 @@
     </div>
   </header>
 
+  <!-- Zone principale injectée en JS selon l'id de la recette -->
   <main class="wrap bloc-section" id="contenu-fiche">
     <!-- Rempli automatiquement selon la recette cliquée -->
   </main>
 
+  <!-- Pied de page -->
   <footer class="site-footer">
     <div class="wrap footer-inner">
       <div>
@@ -38,8 +43,10 @@
     </div>
   </footer>
 
+  <!-- Données des recettes et affichage de la fiche -->
   <script src="recettes-data.js"></script>
   <script>
+    // Récupération de la recette demandée dans l'URL
     const params = new URLSearchParams(window.location.search);
     const id = params.get("id");
     const recette = RECETTES.find((r) => r.id === id) || RECETTES[0];
@@ -49,12 +56,14 @@
 
     let convives = recette.portions;
 
+    // Calcul des quantités selon le nombre de convives
     function formaterQuantite(qteBase) {
       const val = (qteBase * convives) / recette.portions;
       if (Number.isInteger(val)) return val;
       return Math.round(val * 10) / 10;
     }
 
+    // Affichage de la liste d'ingrédients à cocher
     function rendreIngredients() {
       const ul = document.getElementById("liste-ingredients");
       ul.innerHTML = recette.ingredients.map((ing, idx) => `
@@ -67,6 +76,7 @@
       `).join("");
     }
 
+    // Structure de la fiche recette
     conteneur.innerHTML = `
       <div class="barre-retour">
         <a href="index.html#catalogue" class="btn-ligne">Retour au catalogue</a>
@@ -129,6 +139,7 @@
 
     rendreIngredients();
 
+    // Gestion des boutons + et - pour les portions
     document.getElementById("moins").addEventListener("click", () => {
       if (convives > 1) {
         convives--;
