@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>La boîte à recettes — Cuisine d'hiver &amp; tables de Noël par Marilou C.</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;0,700;1,600&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <header class="site-header">
+    <div class="wrap header-inner">
+      <a href="index.html" class="brand">
+        <span class="brand-name">La boîte à recettes</span>
+        <span class="brand-sub">par Marilou C.</span>
+      </a>
+      <nav class="main-nav" aria-label="Navigation principale">
+        <a href="#catalogue">Recettes</a>
+        <a href="menus-complets.html">Menus complets</a>
+        <a href="#carnet">Carnet de courses</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <!-- Une éditoriale asymétrique -->
+    <section class="une">
+      <div class="wrap une-grid">
+        <div class="une-texte">
+          <p class="rubrique">Numéro d'hiver &amp; fêtes de fin d'année</p>
+          <h1>Trouver l'idée juste pour les repas d'hiver et les tables de <em>Noël</em>.</h1>
+          <p class="chapo">Des grands classiques rassurants aux assiettes plus surprenantes : cliquez sur une recette pour ouvrir sa page détaillée ou explorez nos menus complets d'hiver et de fête.</p>
+          <div class="une-actions">
+            <a href="#catalogue" class="btn-plein">Parcourir les recettes</a>
+            <a href="menus-complets.html" class="btn-ligne">Voir les menus complets</a>
+          </div>
+        </div>
+
+        <a href="recette-magret-orange-miel.html" class="une-visuel">
+          <img src="https://www.legourmeur.fr/news/wp-content/uploads/2025/12/news-brouillon-auto-magret-orange-scaled.webp" alt="Magret de canard rôti à l'orange et au miel">
+          <div class="une-legende">
+            <span class="tag-rouge">À la une</span>
+            <strong>Magret de canard rôti à l'orange et au miel</strong>
+            <span>25 min · Ouvrir la page de la recette</span>
+          </div>
+        </a>
+      </div>
+    </section>
+
+    <!-- Catalogue filtrable -->
+    <section id="catalogue" class="wrap bloc-section">
+      <div class="entete-catalogue">
+        <div>
+          <p class="rubrique">Le répertoire</p>
+          <h2>Toutes les recettes</h2>
+        </div>
+
+        <div class="outils-filtre">
+          <input type="search" id="champ-recherche" placeholder="Rechercher un ingrédient, un plat..." aria-label="Rechercher une recette">
+          <div class="onglets" role="tablist">
+            <button type="button" class="onglet actif" data-cat="Toutes">Toutes</button>
+            <button type="button" class="onglet" data-cat="Noël">Repas de Noël</button>
+            <button type="button" class="onglet" data-cat="Soir d'hiver">Soirs d'hiver</button>
+            <button type="button" class="onglet" data-cat="Inattendu">Idées inattendues</button>
+          </div>
+        </div>
+      </div>
+
+      <div id="grille-recettes" class="grille-recettes"></div>
+    </section>
+
+    <!-- Bandeau éditorial menus complets -->
+    <section id="selection-noel" class="bandeau-fete">
+      <div class="wrap bandeau-grid">
+        <div>
+          <p class="rubrique-claire">Composer son menu de fête</p>
+          <h2>Besoin d'un repas complet sans réfléchir ?</h2>
+          <p>Cliquez sur l'un de ces plats ou ouvrez la page des menus complets pour découvrir nos accords entrée, plat et dessert pensés pour Noël et l'hiver.</p>
+          <div style="margin-top: 22px;">
+            <a href="menus-complets.html" class="btn-plein">Découvrir tous les menus complets</a>
+          </div>
+        </div>
+        <div class="menu-type">
+          <a href="recette-veloute-potimarron-chataignes.html" class="etape-menu">
+            <span>Entrée</span>
+            <strong>Velouté de potimarron aux châtaignes</strong>
+          </a>
+          <a href="recette-chapon-marrons-noel.html" class="etape-menu">
+            <span>Plat</span>
+            <strong>Volaille rôtie de Noël aux marrons</strong>
+          </a>
+          <a href="recette-buche-chocolat-praline.html" class="etape-menu">
+            <span>Dessert</span>
+            <strong>Bûche croustillante chocolat et praliné</strong>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Carnet personnel -->
+    <section id="carnet" class="wrap bloc-section">
+      <div class="carnet-box">
+        <div class="carnet-intro">
+          <p class="rubrique">Bloc-notes de cuisine</p>
+          <h2>Votre liste de courses et idées de menu</h2>
+          <p>Notez ici vos produits frais à commander ou les plats retenus pour votre prochain dîner.</p>
+        </div>
+        <div class="carnet-form">
+          <input type="text" id="nouvelle-tache" placeholder="Ajouter un produit ou une idée de plat...">
+          <button type="button" id="btn-ajouter" class="btn-plein">Ajouter</button>
+        </div>
+        <ul id="liste-taches" class="liste-courses"></ul>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="wrap footer-inner">
+      <div>
+        <strong class="brand-name">La boîte à recettes</strong>
+        <p>Carnet culinaire d'hiver et de fêtes par Marilou C.</p>
+      </div>
+      <a href="menus-complets.html" class="lien-retour">Menus complets</a>
+    </div>
+  </footer>
+
+  <script src="recettes-data.js"></script>
+  <script src="taches.js"></script>
+  <script>
+    const grille = document.getElementById("grille-recettes");
+    const champRecherche = document.getElementById("champ-recherche");
+    const onglets = document.querySelectorAll(".onglet");
+    let categorieActive = "Toutes";
+
+    function afficherRecettes() {
+      const terme = champRecherche.value.trim().toLowerCase();
+      const filtrees = RECETTES.filter((r) => {
+        const okCat = categorieActive === "Toutes" || r.categorie === categorieActive;
+        const texte = (r.titre + " " + r.accroche + " " + r.ingredients.map(i => i.nom).join(" ")).toLowerCase();
+        return okCat && texte.includes(terme);
+      });
+
+      if (filtrees.length === 0) {
+        grille.innerHTML = '<p class="vide">Aucune recette ne correspond à cette recherche.</p>';
+        return;
+      }
+
+      grille.innerHTML = filtrees.map((r) => `
+        <article class="carte">
+          <a href="${r.fichier}" class="carte-visuel">
+            <img src="${r.image}" alt="${r.titre}" loading="lazy">
+            <span class="badge-cat">${r.categorie}</span>
+          </a>
+          <div class="carte-contenu">
+            <h3><a href="${r.fichier}">${r.titre}</a></h3>
+            <p>${r.accroche}</p>
+            <div class="carte-pied">
+              <span>${r.temps} · ${r.difficulte}</span>
+              <a href="${r.fichier}" class="lien-recette">Voir la recette</a>
+            </div>
+          </div>
+        </article>
+      `).join("");
+    }
+
+    onglets.forEach((btn) => {
+      btn.addEventListener("click", () => {
+        onglets.forEach((b) => b.classList.remove("actif"));
+        btn.classList.add("actif");
+        categorieActive = btn.dataset.cat;
+        afficherRecettes();
+      });
+    });
+
+    champRecherche.addEventListener("input", afficherRecettes);
+    afficherRecettes();
+  </script>
+</body>
+</html>

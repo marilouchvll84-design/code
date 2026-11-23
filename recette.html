@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Fiche recette — La boîte à recettes par Marilou C.</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;0,700;1,600&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <header class="site-header">
+    <div class="wrap header-inner">
+      <a href="index.html" class="brand">
+        <span class="brand-name">La boîte à recettes</span>
+        <span class="brand-sub">par Marilou C.</span>
+      </a>
+      <nav class="main-nav">
+        <a href="index.html#catalogue">Toutes les recettes</a>
+        <a href="index.html#carnet">Carnet de courses</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="wrap bloc-section" id="contenu-fiche">
+    <!-- Rempli automatiquement selon la recette cliquée -->
+  </main>
+
+  <footer class="site-footer">
+    <div class="wrap footer-inner">
+      <div>
+        <strong class="brand-name">La boîte à recettes</strong>
+        <p>Carnet culinaire d'hiver et de fêtes par Marilou C.</p>
+      </div>
+      <a href="index.html" class="lien-retour">Retour à l'accueil</a>
+    </div>
+  </footer>
+
+  <script src="recettes-data.js"></script>
+  <script>
+    const params = new URLSearchParams(window.location.search);
+    const id = params.get("id");
+    const recette = RECETTES.find((r) => r.id === id) || RECETTES[0];
+    const conteneur = document.getElementById("contenu-fiche");
+
+    document.title = recette.titre + " — La boîte à recettes";
+
+    let convives = recette.portions;
+
+    function formaterQuantite(qteBase) {
+      const val = (qteBase * convives) / recette.portions;
+      if (Number.isInteger(val)) return val;
+      return Math.round(val * 10) / 10;
+    }
+
+    function rendreIngredients() {
+      const ul = document.getElementById("liste-ingredients");
+      ul.innerHTML = recette.ingredients.map((ing, idx) => `
+        <li>
+          <label class="check-ing">
+            <input type="checkbox" id="ing-${idx}">
+            <span><strong>${formaterQuantite(ing.qte)} ${ing.unite}</strong> ${ing.nom}</span>
+          </label>
+        </li>
+      `).join("");
+    }
+
+    conteneur.innerHTML = `
+      <div class="barre-retour">
+        <a href="index.html#catalogue" class="btn-ligne">Retour au catalogue</a>
+        <button type="button" onclick="window.print()" class="btn-ligne">Imprimer la fiche</button>
+      </div>
+
+      <article class="fiche">
+        <header class="fiche-hero">
+          <div>
+            <p class="rubrique">${recette.categorie}</p>
+            <h1 class="fiche-titre">${recette.titre}</h1>
+            <p class="chapo">${recette.accroche}</p>
+            <dl class="fiche-infos">
+              <div><dt>Préparation</dt><dd>${recette.temps}</dd></div>
+              <div><dt>Difficulté</dt><dd>${recette.difficulte}</dd></div>
+              <div><dt>Convives</dt><dd id="affichage-convives">${convives} personnes</dd></div>
+            </dl>
+          </div>
+          <div class="fiche-image">
+            <img src="${recette.image}" alt="${recette.titre}">
+          </div>
+        </header>
+
+        <div class="fiche-corps">
+          <aside class="colonne-ingredients">
+            <div class="bloc-clair">
+              <div class="entete-portions">
+                <h2>Ingrédients</h2>
+                <div class="compteur">
+                  <button type="button" id="moins" aria-label="Diminuer les portions">-</button>
+                  <span id="nb-convives">${convives} pers.</span>
+                  <button type="button" id="plus" aria-label="Augmenter les portions">+</button>
+                </div>
+              </div>
+              <ul id="liste-ingredients" class="liste-ing"></ul>
+            </div>
+
+            <div class="bloc-clair" style="margin-top: 20px;">
+              <h3>Matériel nécessaire</h3>
+              <ul class="liste-ustensiles">
+                ${recette.ustensiles.map(u => `<li>${u}</li>`).join("")}
+              </ul>
+            </div>
+          </aside>
+
+          <section class="colonne-etapes">
+            <h2>Préparation pas à pas</h2>
+            <ol class="etapes">
+              ${recette.etapes.map(e => `<li>${e}</li>`).join("")}
+            </ol>
+
+            <div class="encadre-conseil">
+              <strong>Note de Marilou C.</strong>
+              <p>${recette.conseil}</p>
+            </div>
+          </section>
+        </div>
+      </article>
+    `;
+
+    rendreIngredients();
+
+    document.getElementById("moins").addEventListener("click", () => {
+      if (convives > 1) {
+        convives--;
+        document.getElementById("nb-convives").textContent = convives + " pers.";
+        document.getElementById("affichage-convives").textContent = convives + " personnes";
+        rendreIngredients();
+      }
+    });
+
+    document.getElementById("plus").addEventListener("click", () => {
+      if (convives < 20) {
+        convives++;
+        document.getElementById("nb-convives").textContent = convives + " pers.";
+        document.getElementById("affichage-convives").textContent = convives + " personnes";
+        rendreIngredients();
+      }
+    });
+  </script>
+</body>
+</html>
