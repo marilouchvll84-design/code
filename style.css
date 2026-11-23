@@ -660,3 +660,85 @@ a {
     align-items: flex-start;
   }
 }
+/* ---------- Liste de courses interactive ---------- */
+.liste-outils {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 12px;
+  flex-wrap: wrap;
+  margin-bottom: 12px;
+  font-size: 0.88rem;
+  color: var(--doux);
+}
+
+.btn-texte-rouge {
+  background: none;
+  border: none;
+  color: var(--rouge);
+  font-family: var(--sans);
+  font-size: 0.86rem;
+  font-weight: 600;
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+.liste-courses {
+  list-style: none;
+  border-top: 1px solid var(--filet);
+}
+
+.liste-courses li.item-course {
+  background: var(--papier);
+  border-bottom: 1px solid var(--filet);
+  padding: 12px 14px;
+  margin-bottom: 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 14px;
+}
+
+.label-course {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  cursor: pointer;
+  flex: 1;
+}
+
+.label-course input[type="checkbox"] {
+  width: 17px;
+  height: 17px;
+  accent-color: var(--rouge);
+  cursor: pointer;
+}
+
+.item-course.est-fait .texte-course {
+  text-decoration: line-through;
+  color: var(--doux);
+}
+
+.btn-supprimer {
+  background: transparent;
+  border: 1px solid var(--filet);
+  color: var(--doux);
+  padding: 5px 10px;
+  font-family: var(--sans);
+  font-size: 0.78rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.15s;
+}
+
+.btn-supprimer:hover {
+  border-color: var(--rouge);
+  color: var(--rouge);
+}
+
+.liste-vide {
+  padding: 18px 14px;
+  color: var(--doux);
+  font-style: italic;
+  border-bottom: 1px solid var(--filet);
+}

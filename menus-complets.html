@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Menus complets festifs — La boîte à recettes par Marilou C.</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;0,700;1,500;1,600&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <style>
+    .section-menu {
+      padding: 48px 0;
+      border-top: 1px solid var(--filet);
+    }
+
+    .section-menu h2 {
+      font-family: var(--serif);
+      font-size: clamp(1.9rem, 3.4vw, 2.5rem);
+      font-weight: 600;
+      color: var(--rouge-sombre);
+      margin-bottom: 24px;
+    }
+
+    .grille-3 {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 28px;
+    }
+
+    .carte-simple {
+      background: var(--papier);
+      border: 1px solid var(--filet);
+      display: flex;
+      flex-direction: column;
+    }
+
+    .carte-simple-img {
+      height: 210px;
+      overflow: hidden;
+      background: var(--rouge-doux);
+    }
+
+    .carte-simple-img img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+    }
+
+    .carte-simple-corps {
+      padding: 22px;
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+      flex: 1;
+    }
+
+    .carte-simple-corps h3 {
+      font-family: var(--serif);
+      font-size: 1.55rem;
+      font-weight: 600;
+      color: var(--encre);
+      line-height: 1.2;
+    }
+
+    .carte-simple-corps p {
+      font-size: 0.9rem;
+      color: var(--doux);
+      line-height: 1.6;
+    }
+
+    .detail-recette {
+      margin-top: auto;
+      padding-top: 12px;
+      border-top: 1px solid var(--filet);
+      font-size: 0.86rem;
+      color: var(--encre);
+      line-height: 1.55;
+    }
+
+    @media (max-width: 900px) {
+      .grille-3 {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <header class="site-header">
+    <div class="wrap header-inner">
+      <a href="index.html" class="brand">
+        <span class="brand-name">La boîte à recettes</span>
+        <span class="brand-sub">par Marilou C.</span>
+      </a>
+      <nav class="main-nav" aria-label="Navigation principale">
+        <a href="index.html#catalogue">Recettes</a>
+        <a href="menus-complets.html">Menus complets</a>
+        <a

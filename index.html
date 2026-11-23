@@ -26,13 +26,12 @@
   </header>
 
   <main>
-    <!-- Une éditoriale asymétrique -->
     <section class="une">
       <div class="wrap une-grid">
         <div class="une-texte">
           <p class="rubrique">Numéro d'hiver &amp; fêtes de fin d'année</p>
           <h1>Trouver l'idée juste pour les repas d'hiver et les tables de <em>Noël</em>.</h1>
-          <p class="chapo">Des grands classiques rassurants aux assiettes plus surprenantes : cliquez sur une recette pour ouvrir sa page détaillée ou explorez nos menus complets d'hiver et de fête.</p>
+          <p class="chapo">Toutes les recettes d'hiver, les grands plats de Noël, les idées plus inattendues et les menus complets réunis au même endroit.</p>
           <div class="une-actions">
             <a href="#catalogue" class="btn-plein">Parcourir les recettes</a>
             <a href="menus-complets.html" class="btn-ligne">Voir les menus complets</a>
@@ -40,7 +39,7 @@
         </div>
 
         <a href="recette-magret-orange-miel.html" class="une-visuel">
-          <img src="https://www.legourmeur.fr/news/wp-content/uploads/2025/12/news-brouillon-auto-magret-orange-scaled.webp" alt="Magret de canard rôti à l'orange et au miel">
+          <img src="https://www.st-claire.eu/wp-content/uploads/2025/01/canard_a_l_orange_mijote_5201.jpg" alt="Canard à l'orange">
           <div class="une-legende">
             <span class="tag-rouge">À la une</span>
             <strong>Magret de canard rôti à l'orange et au miel</strong>
@@ -50,57 +49,259 @@
       </div>
     </section>
 
-    <!-- Catalogue filtrable -->
     <section id="catalogue" class="wrap bloc-section">
       <div class="entete-catalogue">
         <div>
-          <p class="rubrique">Le répertoire</p>
+          <p class="rubrique">Le répertoire complet</p>
           <h2>Toutes les recettes</h2>
         </div>
-
-        <div class="outils-filtre">
-          <input type="search" id="champ-recherche" placeholder="Rechercher un ingrédient, un plat..." aria-label="Rechercher une recette">
-          <div class="onglets" role="tablist">
-            <button type="button" class="onglet actif" data-cat="Toutes">Toutes</button>
-            <button type="button" class="onglet" data-cat="Noël">Repas de Noël</button>
-            <button type="button" class="onglet" data-cat="Soir d'hiver">Soirs d'hiver</button>
-            <button type="button" class="onglet" data-cat="Inattendu">Idées inattendues</button>
-          </div>
-        </div>
       </div>
 
-      <div id="grille-recettes" class="grille-recettes"></div>
-    </section>
+      <div class="grille-recettes">
 
-    <!-- Bandeau éditorial menus complets -->
-    <section id="selection-noel" class="bandeau-fete">
-      <div class="wrap bandeau-grid">
-        <div>
-          <p class="rubrique-claire">Composer son menu de fête</p>
-          <h2>Besoin d'un repas complet sans réfléchir ?</h2>
-          <p>Cliquez sur l'un de ces plats ou ouvrez la page des menus complets pour découvrir nos accords entrée, plat et dessert pensés pour Noël et l'hiver.</p>
-          <div style="margin-top: 22px;">
-            <a href="menus-complets.html" class="btn-plein">Découvrir tous les menus complets</a>
+        <article class="carte">
+          <a href="recette-veloute-potimarron-chataignes.html" class="carte-visuel">
+            <img src="https://www.vanessacuisine.fr/wp-content/uploads/2025/01/veloute-potimarron-chataigne-1097x1536.jpg" alt="Velouté de potimarron aux éclats de châtaignes">
+            <span class="badge-cat">Entrée</span>
+          </a>
+          <div class="carte-contenu">
+            <h3><a href="recette-veloute-potimarron-chataignes.html">Velouté de potimarron aux châtaignes</a></h3>
+            <p>Une entrée festive douce et soyeuse, servie avec des châtaignes dorées au beurre.</p>
+            <div class="carte-pied">
+              <span>30 min · Facile</span>
+              <a href="recette-veloute-potimarron-chataignes.html" class="lien-recette">Voir la recette</a>
+            </div>
           </div>
-        </div>
-        <div class="menu-type">
-          <a href="recette-veloute-potimarron-chataignes.html" class="etape-menu">
-            <span>Entrée</span>
-            <strong>Velouté de potimarron aux châtaignes</strong>
+        </article>
+
+        <article class="carte">
+          <a href="recette-foie-gras.html" class="carte-visuel">
+            <img src="https://www.theliquorstore.fr/wp-content/uploads/2022/10/visu-proviennent-meilleurs.jpg" alt="Foie gras maison mi-cuit">
+            <span class="badge-cat">Entrée</span>
           </a>
-          <a href="recette-chapon-marrons-noel.html" class="etape-menu">
-            <span>Plat</span>
-            <strong>Volaille rôtie de Noël aux marrons</strong>
+          <div class="carte-contenu">
+            <h3><a href="recette-foie-gras.html">Foie gras maison mi-cuit</a></h3>
+            <p>Assaisonné au sel, poivre, quatre-épices et vin liquoreux, poché doucement puis réservé au frais.</p>
+            <div class="carte-pied">
+              <span>20 min · Moyen</span>
+              <a href="recette-foie-gras.html" class="lien-recette">Voir la recette</a>
+            </div>
+          </div>
+        </article>
+
+        <article class="carte">
+          <a href="recette-saumon-gravlax.html" class="carte-visuel">
+            <img src="https://images.unsplash.com/photo-1519708227418-c8fd9a32b7a2?auto=format&amp;fit=crop&amp;w=900&amp;q=80" alt="Saumon gravlax aux herbes et citron">
+            <span class="badge-cat">Entrée</span>
           </a>
-          <a href="recette-buche-chocolat-praline.html" class="etape-menu">
-            <span>Dessert</span>
-            <strong>Bûche croustillante chocolat et praliné</strong>
+          <div class="carte-contenu">
+            <h3><a href="recette-saumon-gravlax.html">Saumon gravlax aux herbes et citron</a></h3>
+            <p>Filet de saumon mariné au gros sel, sucre roux, zestes de citron et aneth frais.</p>
+            <div class="carte-pied">
+              <span>15 min · Facile</span>
+              <a href="recette-saumon-gravlax.html" class="lien-recette">Voir la recette</a>
+            </div>
+          </div>
+        </article>
+
+        <article class="carte">
+          <a href="recette-saint-jacques.html" class="carte-visuel">
+            <img src="https://images.unsplash.com/photo-1559737558-2bf22b2e12e7?auto=format&amp;fit=crop&amp;w=900&amp;q=80" alt="Noix de Saint-Jacques gratinées">
+            <span class="badge-cat">Entrée</span>
           </a>
-        </div>
+          <div class="carte-contenu">
+            <h3><a href="recette-saint-jacques.html">Noix de Saint-Jacques gratinées</a></h3>
+            <p>Noix nacrées enrobées d'une sauce douce aux échalotes et à la crème, dorées sous le gril.</p>
+            <div class="carte-pied">
+              <span>30 min · Facile</span>
+              <a href="recette-saint-jacques.html" class="lien-recette">Voir la recette</a>
+            </div>
+          </div>
+        </article>
+
+        <article class="carte">
+          <a href="recette-magret-orange-miel.html" class="carte-visuel">
+            <img src="https://www.st-claire.eu/wp-content/uploads/2025/01/canard_a_l_orange_mijote_5201.jpg" alt="Magret de canard rôti à l'orange et au miel">
+            <span class="badge-cat">Noël</span>
+          </a>
+          <div class="carte-contenu">
+            <h3><a href="recette-magret-orange-miel.html">Magret de canard rôti à l'orange et au miel</a></h3>
+            <p>Peau dorée et croustillante, chair rosée et réduction brillante aux agrumes d'hiver.</p>
+            <div class="carte-pied">
+              <span>25 min · Moyen</span>
+              <a href="recette-magret-orange-miel.html" class="lien-recette">Voir la recette</a>
+            </div>
+          </div>
+        </article>
+
+        <article class="carte">
+          <a href="recette-chapon-marrons-noel.html" class="carte-visuel">
+            <img src="https://www.legourmeur.fr/news/wp-content/uploads/2025/12/news-brouillon-auto-chapon-marron-scaled.webp" alt="Volaille rôtie de Noël aux marrons et pommes dorées">
+            <span class="badge-cat">Noël</span>
+          </a>
+          <div class="carte-contenu">
+            <h3><a href="recette-chapon-marrons-noel.html">Volaille rôtie de Noël aux marrons et pommes dorées</a></h3>
+            <p>Une grande pièce dorée au beurre d'herbes, entourée de marrons fondants et de petites pommes de terre rôties.</p>
+            <div class="carte-pied">
+              <span>1 h 45 · Moyen</span>
+              <a href="recette-chapon-marrons-noel.html" class="lien-recette">Voir la recette</a>
+            </div>
+          </div>
+        </article>
+
+        <article class="carte">
+          <a href="recette-souris-agneau.html" class="carte-visuel">
+            <img src="https://images.unsplash.com/photo-1529692236671-f1f6cf9683ba?auto=format&amp;fit=crop&amp;w=900&amp;q=80" alt="Souris d'agneau confite aux herbes">
+            <span class="badge-cat">Noël</span>
+          </a>
+          <div class="carte-contenu">
+            <h3><a href="recette-souris-agneau.html">Souris d'agneau confite aux herbes</a></h3>
+            <p>Dorée en cocotte avec ail, romarin et bouillon, mijotée lentement jusqu'à devenir fondante.</p>
+            <div class="carte-pied">
+              <span>2 h 30 · Facile</span>
+              <a href="recette-souris-agneau.html" class="lien-recette">Voir la recette</a>
+            </div>
+          </div>
+        </article>
+
+        <article class="carte">
+          <a href="recette-risotto-truffes.html" class="carte-visuel">
+            <img src="https://images.unsplash.com/photo-1476124369491-e7addf5db371?auto=format&amp;fit=crop&amp;w=900&amp;q=80" alt="Risotto crémeux aux truffes et parmesan">
+            <span class="badge-cat">Noël</span>
+          </a>
+          <div class="carte-contenu">
+            <h3><a href="recette-risotto-truffes.html">Risotto crémeux aux truffes et parmesan</a></h3>
+            <p>Riz nacré au vin blanc, monté au bouillon chaud puis lié au parmesan affiné et à la truffe.</p>
+            <div class="carte-pied">
+              <span>30 min · Moyen</span>
+              <a href="recette-risotto-truffes.html" class="lien-recette">Voir la recette</a>
+            </div>
+          </div>
+        </article>
+
+        <article class="carte">
+          <a href="recette-ramen-poulet-hiver.html" class="carte-visuel">
+            <img src="https://lacerisesurlemaillot.fr/wp-content/uploads/2021/10/ramen-poulet.jpg" alt="Ramen d'hiver au poulet grillé et œuf mollet">
+            <span class="badge-cat">Inattendu</span>
+          </a>
+          <div class="carte-contenu">
+            <h3><a href="recette-ramen-poulet-hiver.html">Ramen d'hiver au poulet grillé et œuf mollet</a></h3>
+            <p>Un bol fumant au bouillon parfumé au gingembre et miso, idéal pour changer des repas traditionnels.</p>
+            <div class="carte-pied">
+              <span>40 min · Moyen</span>
+              <a href="recette-ramen-poulet-hiver.html" class="lien-recette">Voir la recette</a>
+            </div>
+          </div>
+        </article>
+
+        <article class="carte">
+          <a href="recette-pates-champignons-creme.html" class="carte-visuel">
+            <img src="https://www.picard.fr/dw/image/v2/AAHV_PRD/on/demandware.static/-/Sites-catalog-picard/default/dwa1316ca3/recettes/plats/R1360.jpg?sw=672&amp;sh=392&amp;q=30" alt="Tagliatelles crémeuses aux champignons et noisettes">
+            <span class="badge-cat">Soir d'hiver</span>
+          </a>
+          <div class="carte-contenu">
+            <h3><a href="recette-pates-champignons-creme.html">Tagliatelles crémeuses aux champignons et noisettes</a></h3>
+            <p>Des rubans de pâtes enrobés d'une sauce onctueuse aux champignons sautés, persil plat et noisettes torréfiées.</p>
+            <div class="carte-pied">
+              <span>20 min · Facile</span>
+              <a href="recette-pates-champignons-creme.html" class="lien-recette">Voir la recette</a>
+            </div>
+          </div>
+        </article>
+
+        <article class="carte">
+          <a href="recette-mont-dor-four.html" class="carte-visuel">
+            <img src="https://androuet.com/wp-content/uploads/2026/05/montdor-4.jpg" alt="Mont d'Or coulant rôti au four">
+            <span class="badge-cat">Soir d'hiver</span>
+          </a>
+          <div class="carte-contenu">
+            <h3><a href="recette-mont-dor-four.html">Mont d'Or coulant rôti au four</a></h3>
+            <p>Le fromage emblématique du Haut-Doubs servi chaud dans sa boîte d'épicéa avec pommes de terre vapeur.</p>
+            <div class="carte-pied">
+              <span>30 min · Très facile</span>
+              <a href="recette-mont-dor-four.html" class="lien-recette">Voir la recette</a>
+            </div>
+          </div>
+        </article>
+
+        <article class="carte">
+          <a href="recette-croziflette-reblochon.html" class="carte-visuel">
+            <img src="https://les-epices-curieuses.com/wp-content/uploads/2026/08/gratin-de-crozets-lardons-reblochon-facon-chalet-1110255.jpg" alt="Croziflette gratinée aux lardons et reblochon">
+            <span class="badge-cat">Soir d'hiver</span>
+          </a>
+          <div class="carte-contenu">
+            <h3><a href="recette-croziflette-reblochon.html">Croziflette gratinée aux lardons et reblochon</a></h3>
+            <p>Les petits carrés de pâte au sarrasin de Savoie liés à la crème et gratinés sous un demi-reblochon fermier.</p>
+            <div class="carte-pied">
+              <span>45 min · Facile</span>
+              <a href="recette-croziflette-reblochon.html" class="lien-recette">Voir la recette</a>
+            </div>
+          </div>
+        </article>
+
+        <article class="carte">
+          <a href="recette-pates-epinards-miso.html" class="carte-visuel">
+            <img src="https://cache.marieclaire.fr/data/photo/w1200_h630_ci/6z/spaghettis-aux-poulet-epinards-champignons-et-fromage.jpg" alt="Pâtes aux épinards frais, miso blanc et champignons">
+            <span class="badge-cat">Inattendu</span>
+          </a>
+          <div class="carte-contenu">
+            <h3><a href="recette-pates-epinards-miso.html">Pâtes aux épinards frais, miso blanc et champignons</a></h3>
+            <p>Une sauce crémeuse végétale pleine de profondeur grâce au miso blanc, relevée d'épinards tombés et de parmesan.</p>
+            <div class="carte-pied">
+              <span>25 min · Facile</span>
+              <a href="recette-pates-epinards-miso.html" class="lien-recette">Voir la recette</a>
+            </div>
+          </div>
+        </article>
+
+        <article class="carte">
+          <a href="recette-tiramisu.html" class="carte-visuel">
+            <img src="https://images.unsplash.com/photo-1571877227200-a0d98ea607e9?auto=format&amp;fit=crop&amp;w=900&amp;q=80" alt="Tiramisu classique au mascarpone et cacao">
+            <span class="badge-cat">Dessert</span>
+          </a>
+          <div class="carte-contenu">
+            <h3><a href="recette-tiramisu.html">Tiramisu classique au mascarpone et cacao</a></h3>
+            <p>Biscuits imbibés de café, crème légère au mascarpone et voile de cacao amer.</p>
+            <div class="carte-pied">
+              <span>20 min · Facile</span>
+              <a href="recette-tiramisu.html" class="lien-recette">Voir la recette</a>
+            </div>
+          </div>
+        </article>
+
+        <article class="carte">
+          <a href="recette-buche-marron.html" class="carte-visuel">
+            <img src="https://images.unsplash.com/photo-1578985545062-69928b1d9587?auto=format&amp;fit=crop&amp;w=900&amp;q=80" alt="Bûche de Noël à la crème de marron">
+            <span class="badge-cat">Dessert</span>
+          </a>
+          <div class="carte-contenu">
+            <h3><a href="recette-buche-marron.html">Bûche de Noël à la crème de marron</a></h3>
+            <p>Biscuit moelleux et mousse douce à la crème de marron pour un dessert d'hiver tout en rondeur.</p>
+            <div class="carte-pied">
+              <span>1 h · Moyen</span>
+              <a href="recette-buche-marron.html" class="lien-recette">Voir la recette</a>
+            </div>
+          </div>
+        </article>
+
+        <article class="carte">
+          <a href="recette-buche-chocolat-praline.html" class="carte-visuel">
+            <img src="https://liliebakery.fr/wp-content/uploads/2022/12/Recette-buche-praline-chocolat-croustillante-Lilie-Bakery.jpg" alt="Bûche de Noël croustillante chocolat et praliné">
+            <span class="badge-cat">Dessert</span>
+          </a>
+          <div class="carte-contenu">
+            <h3><a href="recette-buche-chocolat-praline.html">Bûche de Noël croustillante chocolat et praliné</a></h3>
+            <p>Un entremets frais au praliné noisette, insert croustillant et chocolat noir.</p>
+            <div class="carte-pied">
+              <span>1 h 15 · Moyen</span>
+              <a href="recette-buche-chocolat-praline.html" class="lien-recette">Voir la recette</a>
+            </div>
+          </div>
+        </article>
+
       </div>
     </section>
 
-    <!-- Carnet personnel -->
     <section id="carnet" class="wrap bloc-section">
       <div class="carnet-box">
         <div class="carnet-intro">
@@ -127,56 +328,7 @@
     </div>
   </footer>
 
-  <script src="recettes-data.js"></script>
   <script src="taches.js"></script>
-  <script>
-    const grille = document.getElementById("grille-recettes");
-    const champRecherche = document.getElementById("champ-recherche");
-    const onglets = document.querySelectorAll(".onglet");
-    let categorieActive = "Toutes";
-
-    function afficherRecettes() {
-      const terme = champRecherche.value.trim().toLowerCase();
-      const filtrees = RECETTES.filter((r) => {
-        const okCat = categorieActive === "Toutes" || r.categorie === categorieActive;
-        const texte = (r.titre + " " + r.accroche + " " + r.ingredients.map(i => i.nom).join(" ")).toLowerCase();
-        return okCat && texte.includes(terme);
-      });
-
-      if (filtrees.length === 0) {
-        grille.innerHTML = '<p class="vide">Aucune recette ne correspond à cette recherche.</p>';
-        return;
-      }
-
-      grille.innerHTML = filtrees.map((r) => `
-        <article class="carte">
-          <a href="${r.fichier}" class="carte-visuel">
-            <img src="${r.image}" alt="${r.titre}" loading="lazy">
-            <span class="badge-cat">${r.categorie}</span>
-          </a>
-          <div class="carte-contenu">
-            <h3><a href="${r.fichier}">${r.titre}</a></h3>
-            <p>${r.accroche}</p>
-            <div class="carte-pied">
-              <span>${r.temps} · ${r.difficulte}</span>
-              <a href="${r.fichier}" class="lien-recette">Voir la recette</a>
-            </div>
-          </div>
-        </article>
-      `).join("");
-    }
-
-    onglets.forEach((btn) => {
-      btn.addEventListener("click", () => {
-        onglets.forEach((b) => b.classList.remove("actif"));
-        btn.classList.add("actif");
-        categorieActive = btn.dataset.cat;
-        afficherRecettes();
-      });
-    });
-
-    champRecherche.addEventListener("input", afficherRecettes);
-    afficherRecettes();
-  </script>
 </body>
 </html>
+ 
